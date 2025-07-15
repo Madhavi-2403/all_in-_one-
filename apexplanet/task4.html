@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Combined Projects</title>
+    <link rel="stylesheet" href="task4.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MAD</div>
+            <ul class="nav-links">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#projects-showcase">Projects</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#todo-app-section">To-Do App</a></li>
+                <li><a href="#product-listing-section">Products</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-section">
+            <h1>Hi, I'm Madhavi</h1>
+            <p>I'm a passionate web developer with a focus on creating engaging and user-friendly experiences.</p>
+            <a href="#projects-showcase" class="button">View My Projects</a>
+        </section>
+
+        <section id="projects-showcase">
+            <h1>My Projects</h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>To-Do App</h3>
+                    <p>A task manager using localStorage.</p>
+                    <a href="#todo-app-section" class="button">View</a>
+                </div>
+                <div class="project-card">
+                    <h3>Product Listing</h3>
+                    <p>Filterable and sortable product page.</p>
+                    <a href="#product-listing-section" class="button">View</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section">
+            <h1>Contact Me</h1>
+            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="button">Send</button>
+            </form>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </section>
+
+        <section id="todo-app-section">
+            <h1>To-Do List</h1>
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button id="addTodoBtn">Add Task</button>
+            </div>
+            <ul id="todoList"></ul>
+        </section>
+
+        <section id="product-listing-section">
+            <h1>Our Products</h1>
+
+            <div class="controls">
+                <div class="filter-section">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="books">Books</option>
+                        <option value="clothing">Clothing</option>
+                    </select>
+
+                    <label for="priceFilter">Max Price:</label>
+                    <input type="range" id="priceFilter" min="0" max="1000" value="1000">
+                    <span id="priceValue">$1000</span>
+                </div>
+
+                <div class="sort-section">
+                    <label for="sortOption">Sort by:</label>
+                    <select id="sortOption">
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                        <option value="rating-desc">Rating (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productList" class="product-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="task4.js"></script>
+</body>
+</html>
